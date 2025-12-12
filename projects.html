@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="bg-black text-white pt-12 px-4 sm:px-10">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -14,285 +14,241 @@
     rel="stylesheet"
   />
   <style>
-    body {
-      font-family: "Inter", sans-serif;
-    }
+    body { font-family: "Inter", sans-serif; }
   </style>
 </head>
-<body >
+
+<body class="bg-black text-white pt-12 px-4 sm:px-10">
   <div class="max-w-5xl mx-auto">
-    <!-- Header -->
     <header class="mb-12">
-      <div class="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-4">
-        <h1 class="text-4xl font-bold">
-          Projects<span class="text-blue-500">.</span>
-        </h1>
-      </div>
+      <h1 class="text-4xl font-bold">
+        Projects<span class="text-blue-500">.</span>
+      </h1>
     </header>
 
-    <!-- Timeline -->
     <section>
       <div class="relative">
-        <!-- Vertical line -->
-        <div
-          class="absolute left-5.2 sm:left-6.2 top-1.5 bottom-0 w-px bg-gray-800 pointer-events-none"
-        ></div>
+        <!-- Line stays put -->
+        <div class="absolute left-[26px] top-3 bottom-3 w-px bg-gray-800 pointer-events-none z-10"></div>
 
         <div class="space-y-12">
           <!-- Muon -->
-          <article class="relative pl-10 sm:pl-16">
-            <!-- Dot -->
-            <div
-              class="absolute left-3 sm:left-5 top-1.5 h-3 w-3 rounded-full bg-blue-500 border-2 border-black shadow-lg"
-            ></div>
-
-            <p class="text-xs font-medium tracking-wide text-gray-400 uppercase">
-              Dec 2025
-            </p>
-
-            <div
-              class="mt-1 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2"
-            >
-              <a
-                href="https://github.com/oof-baroomf/muon/"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="text-xl sm:text-2xl font-semibold hover:text-blue-400 transition-colors"
-              >
-                Muon
-              </a>
-              <div class="flex flex-wrap gap-2 text-xs text-gray-400">
-                <span class="px-2 py-1 rounded-full bg-gray-800/70 border border-gray-700">
-                  Electron
-                </span>
-                <span class="px-2 py-1 rounded-full bg-gray-800/70 border border-gray-700">
-                  TypeScript
-                </span>
-                <span class="px-2 py-1 rounded-full bg-gray-800/70 border border-gray-700">
-                  Bun
-                </span>
-              </div>
+          <article class="grid grid-cols-[3rem,1fr] gap-6">
+            <div class="flex justify-center pt-1.5">
+              <!-- Dot shifted right by ~0.2x its diameter vs the line -->
+              <div class="relative z-20 translate-x-[3px] h-3 w-3 rounded-full bg-blue-500 border-2 border-black shadow-lg"></div>
             </div>
 
-            <p class="mt-3 text-sm sm:text-base text-gray-300 leading-relaxed">
-              An infinite canvas web browser built with Electron and Typescript
-            </p>
+            <div>
+              <p class="text-xs font-medium tracking-wide text-gray-400 uppercase">Dec 2025</p>
 
-            <div class="mt-4 flex flex-wrap items-center gap-3">
-              <a
-                href="https://github.com/oof-baroomf/muon/"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="inline-flex items-center text-sm font-medium text-blue-400 hover:text-blue-300 hover:underline"
-              >
-                <i class="fab fa-github mr-2"></i>
-                View on GitHub
-              </a>
+              <div class="mt-1 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+                <a
+                  href="https://github.com/oof-baroomf/muon/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-xl sm:text-2xl font-semibold hover:text-blue-400 transition-colors"
+                >
+                  Muon
+                </a>
+
+                <div class="flex flex-wrap gap-2 text-xs text-gray-400">
+                  <span class="px-2 py-1 rounded-full bg-gray-800/70 border border-gray-700">Electron</span>
+                  <span class="px-2 py-1 rounded-full bg-gray-800/70 border border-gray-700">TypeScript</span>
+                  <span class="px-2 py-1 rounded-full bg-gray-800/70 border border-gray-700">Bun</span>
+                </div>
+              </div>
+
+              <p class="mt-3 text-sm sm:text-base text-gray-300 leading-relaxed">
+                An infinite canvas web browser built with Electron and Typescript.
+              </p>
+
+              <div class="mt-4 flex flex-wrap items-center gap-3">
+                <a
+                  href="https://github.com/oof-baroomf/muon/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="inline-flex items-center text-sm font-medium text-blue-400 hover:text-blue-300 hover:underline"
+                >
+                  <i class="fab fa-github mr-2"></i>
+                  View on GitHub
+                </a>
+              </div>
             </div>
           </article>
 
           <!-- PromptMaxx -->
-          <article class="relative pl-10 sm:pl-16">
-            <!-- Dot -->
-            <div
-              class="absolute left-3 sm:left-5 top-1.5 h-3 w-3 rounded-full bg-blue-500 border-2 border-black shadow-lg"
-            ></div>
-
-            <p class="text-xs font-medium tracking-wide text-gray-400 uppercase">
-              June 2025
-            </p>
-
-            <div
-              class="mt-1 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2"
-            >
-              <a
-                href="https://github.com/oof-baroomf/promptmaxx"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="text-xl sm:text-2xl font-semibold hover:text-blue-400 transition-colors"
-              >
-                PromptMaxx
-              </a>
-              <div class="flex flex-wrap gap-2 text-xs text-gray-400">
-                <span class="px-2 py-1 rounded-full bg-gray-800/70 border border-gray-700">
-                  Python
-                </span>
-                <span class="px-2 py-1 rounded-full bg-gray-800/70 border border-gray-700">
-                  Textual
-                </span>
-              </div>
+          <article class="grid grid-cols-[3rem,1fr] gap-6">
+            <div class="flex justify-center pt-1.5">
+              <div class="relative z-20 translate-x-[3px] h-3 w-3 rounded-full bg-blue-500 border-2 border-black shadow-lg"></div>
             </div>
 
-            <p class="mt-3 text-sm sm:text-base text-gray-300 leading-relaxed">
-              A tool to automate context gathering and applying changes when pair programming with online LLMs
-            </p>
+            <div>
+              <p class="text-xs font-medium tracking-wide text-gray-400 uppercase">June 2025</p>
 
-            <div class="mt-4 flex flex-wrap items-center gap-3">
-              <a
-                href="https://github.com/oof-baroomf/promptmaxx"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="inline-flex items-center text-sm font-medium text-blue-400 hover:text-blue-300 hover:underline"
-              >
-                <i class="fab fa-github mr-2"></i>
-                View on GitHub
-              </a>
+              <div class="mt-1 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+                <a
+                  href="https://github.com/oof-baroomf/promptmaxx"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-xl sm:text-2xl font-semibold hover:text-blue-400 transition-colors"
+                >
+                  PromptMaxx
+                </a>
+
+                <div class="flex flex-wrap gap-2 text-xs text-gray-400">
+                  <span class="px-2 py-1 rounded-full bg-gray-800/70 border border-gray-700">Python</span>
+                  <span class="px-2 py-1 rounded-full bg-gray-800/70 border border-gray-700">Textual</span>
+                </div>
+              </div>
+
+              <p class="mt-3 text-sm sm:text-base text-gray-300 leading-relaxed">
+                A tool to automate context gathering and applying changes when pair programming with online LLMs.
+              </p>
+
+              <div class="mt-4 flex flex-wrap items-center gap-3">
+                <a
+                  href="https://github.com/oof-baroomf/promptmaxx"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="inline-flex items-center text-sm font-medium text-blue-400 hover:text-blue-300 hover:underline"
+                >
+                  <i class="fab fa-github mr-2"></i>
+                  View on GitHub
+                </a>
+              </div>
             </div>
           </article>
 
           <!-- Chat with Google Docs -->
-          <article class="relative pl-10 sm:pl-16">
-            <!-- Dot -->
-            <div
-              class="absolute left-3 sm:left-5 top-1.5 h-3 w-3 rounded-full bg-blue-500 border-2 border-black shadow-lg"
-            ></div>
-
-            <p class="text-xs font-medium tracking-wide text-gray-400 uppercase">
-              May 2025
-            </p>
-
-            <div
-              class="mt-1 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2"
-            >
-              <a
-                href="https://github.com/oof-baroomf/chat-google-docs"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="text-xl sm:text-2xl font-semibold hover:text-blue-400 transition-colors"
-              >
-                Chat with Google Docs
-              </a>
-              <div class="flex flex-wrap gap-2 text-xs text-gray-400">
-                <span class="px-2 py-1 rounded-full bg-gray-800/70 border border-gray-700">
-                  Google OAuth
-                </span>
-                <span class="px-2 py-1 rounded-full bg-gray-800/70 border border-gray-700">
-                  Typescript
-                </span>
-                <span class="px-2 py-1 rounded-full bg-gray-800/70 border border-gray-700">
-                  React
-                </span>                
-              </div>
+          <article class="grid grid-cols-[3rem,1fr] gap-6">
+            <div class="flex justify-center pt-1.5">
+              <div class="relative z-20 translate-x-[3px] h-3 w-3 rounded-full bg-blue-500 border-2 border-black shadow-lg"></div>
             </div>
 
-            <p class="mt-3 text-sm sm:text-base text-gray-300 leading-relaxed">
-              Sign in with your Google account and chat with RAG over your docs.
-            </p>
+            <div>
+              <p class="text-xs font-medium tracking-wide text-gray-400 uppercase">May 2025</p>
 
-            <div class="mt-4 flex flex-wrap items-center gap-3">
-              <a
-                href="https://github.com/oof-baroomf/chat-google-docs"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="inline-flex items-center text-sm font-medium text-blue-400 hover:text-blue-300 hover:underline"
-              >
-                <i class="fab fa-github mr-2"></i>
-                View on GitHub
-              </a>
+              <div class="mt-1 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+                <a
+                  href="https://github.com/oof-baroomf/chat-google-docs"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-xl sm:text-2xl font-semibold hover:text-blue-400 transition-colors"
+                >
+                  Chat with Google Docs
+                </a>
+
+                <div class="flex flex-wrap gap-2 text-xs text-gray-400">
+                  <span class="px-2 py-1 rounded-full bg-gray-800/70 border border-gray-700">Google OAuth</span>
+                  <span class="px-2 py-1 rounded-full bg-gray-800/70 border border-gray-700">TypeScript</span>
+                  <span class="px-2 py-1 rounded-full bg-gray-800/70 border border-gray-700">React</span>
+                </div>
+              </div>
+
+              <p class="mt-3 text-sm sm:text-base text-gray-300 leading-relaxed">
+                Sign in with your Google account and chat with RAG over your docs.
+              </p>
+
+              <div class="mt-4 flex flex-wrap items-center gap-3">
+                <a
+                  href="https://github.com/oof-baroomf/chat-google-docs"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="inline-flex items-center text-sm font-medium text-blue-400 hover:text-blue-300 hover:underline"
+                >
+                  <i class="fab fa-github mr-2"></i>
+                  View on GitHub
+                </a>
+              </div>
             </div>
           </article>
 
           <!-- MuseFalcon -->
-          <article class="relative pl-10 sm:pl-16">
-            <!-- Dot -->
-            <div
-              class="absolute left-3 sm:left-5 top-1.5 h-3 w-3 rounded-full bg-blue-500 border-2 border-black shadow-lg"
-            ></div>
-
-            <p class="text-xs font-medium tracking-wide text-gray-400 uppercase">
-              June 2023
-            </p>
-
-            <div
-              class="mt-1 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2"
-            >
-              <a
-                href="https://huggingface.co/oof-baroomf/MuseGPT"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="text-xl sm:text-2xl font-semibold hover:text-blue-400 transition-colors"
-              >
-                MuseFalcon
-              </a>
-              <div class="flex flex-wrap gap-2 text-xs text-gray-400">
-                <span class="px-2 py-1 rounded-full bg-gray-800/70 border border-gray-700">
-                  Transformers
-                </span>
-                <span class="px-2 py-1 rounded-full bg-gray-800/70 border border-gray-700">
-                  LoRA
-                </span>
-                <span class="px-2 py-1 rounded-full bg-gray-800/70 border border-gray-700">
-                  Optical Music Recognition
-                </span>
-              </div>
+          <article class="grid grid-cols-[3rem,1fr] gap-6">
+            <div class="flex justify-center pt-1.5">
+              <div class="relative z-20 translate-x-[3px] h-3 w-3 rounded-full bg-blue-500 border-2 border-black shadow-lg"></div>
             </div>
 
-            <p class="mt-3 text-sm sm:text-base text-gray-300 leading-relaxed">
-              A model built off of Falcon 40B that generates music in ABC notation.
-            </p>
+            <div>
+              <p class="text-xs font-medium tracking-wide text-gray-400 uppercase">June 2023</p>
 
-            <div class="mt-4 flex flex-wrap items-center gap-3">
-              <a
-                href="https://huggingface.co/oof-baroomf/MuseGPT"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="inline-flex items-center text-sm font-medium text-blue-400 hover:text-blue-300 hover:underline"
-              >
-                <i class="fas fa-external-link-alt mr-2"></i>
-                View on Hugging Face
-              </a>
+              <div class="mt-1 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+                <a
+                  href="https://huggingface.co/oof-baroomf/MuseGPT"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-xl sm:text-2xl font-semibold hover:text-blue-400 transition-colors"
+                >
+                  MuseFalcon
+                </a>
+
+                <div class="flex flex-wrap gap-2 text-xs text-gray-400">
+                  <span class="px-2 py-1 rounded-full bg-gray-800/70 border border-gray-700">Transformers</span>
+                  <span class="px-2 py-1 rounded-full bg-gray-800/70 border border-gray-700">LoRA</span>
+                  <span class="px-2 py-1 rounded-full bg-gray-800/70 border border-gray-700">Optical Music Recognition</span>
+                </div>
+              </div>
+
+              <p class="mt-3 text-sm sm:text-base text-gray-300 leading-relaxed">
+                A model built off of Falcon 40B that generates music in ABC notation.
+              </p>
+
+              <div class="mt-4 flex flex-wrap items-center gap-3">
+                <a
+                  href="https://huggingface.co/oof-baroomf/MuseGPT"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="inline-flex items-center text-sm font-medium text-blue-400 hover:text-blue-300 hover:underline"
+                >
+                  <i class="fas fa-external-link-alt mr-2"></i>
+                  View on Hugging Face
+                </a>
+              </div>
             </div>
           </article>
 
           <!-- Raspberry Pi Smart Glasses -->
-          <article class="relative pl-10 sm:pl-16">
-            <!-- Dot -->
-            <div
-              class="absolute left-3 sm:left-5 top-1.5 h-3 w-3 rounded-full bg-blue-500 border-2 border-black shadow-lg"
-            ></div>
-
-            <p class="text-xs font-medium tracking-wide text-gray-400 uppercase">
-              March 2021
-            </p>
-
-            <div
-              class="mt-1 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2"
-            >
-              <a
-                href="https://www.instructables.com/Powerful-Raspberry-Pi-Smart-Glasses-for-Under-50-W-1/"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="text-xl sm:text-2xl font-semibold hover:text-blue-400 transition-colors"
-              >
-                Raspberry Pi Smart Glasses
-              </a>
-              <div class="flex flex-wrap gap-2 text-xs text-gray-400">
-                <span class="px-2 py-1 rounded-full bg-gray-800/70 border border-gray-700">
-                  Raspberry Pi
-                </span>
-                <span class="px-2 py-1 rounded-full bg-gray-800/70 border border-gray-700">
-                  Wearables
-                </span>
-                <span class="px-2 py-1 rounded-full bg-gray-800/70 border border-gray-700">
-                  Hardware
-                </span>
-              </div>
+          <article class="grid grid-cols-[3rem,1fr] gap-6">
+            <div class="flex justify-center pt-1.5">
+              <div class="relative z-20 translate-x-[3px] h-3 w-3 rounded-full bg-blue-500 border-2 border-black shadow-lg"></div>
             </div>
 
-            <p class="mt-3 text-sm sm:text-base text-gray-300 leading-relaxed">
-              $55 for a Linux desktop on your glasses
-            </p>
+            <div>
+              <p class="text-xs font-medium tracking-wide text-gray-400 uppercase">March 2021</p>
 
-            <div class="mt-4 flex flex-wrap items-center gap-3">
-              <a
-                href="https://www.instructables.com/Powerful-Raspberry-Pi-Smart-Glasses-for-Under-50-W-1/"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="inline-flex items-center text-sm font-medium text-blue-400 hover:text-blue-300 hover:underline"
-              >
-                <i class="fas fa-external-link-alt mr-2"></i>
-                View on Instructables
-              </a>
+              <div class="mt-1 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+                <a
+                  href="https://www.instructables.com/Powerful-Raspberry-Pi-Smart-Glasses-for-Under-50-W-1/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-xl sm:text-2xl font-semibold hover:text-blue-400 transition-colors"
+                >
+                  Raspberry Pi Smart Glasses
+                </a>
+
+                <div class="flex flex-wrap gap-2 text-xs text-gray-400">
+                  <span class="px-2 py-1 rounded-full bg-gray-800/70 border border-gray-700">Raspberry Pi</span>
+                  <span class="px-2 py-1 rounded-full bg-gray-800/70 border border-gray-700">Wearables</span>
+                  <span class="px-2 py-1 rounded-full bg-gray-800/70 border border-gray-700">Hardware</span>
+                </div>
+              </div>
+
+              <p class="mt-3 text-sm sm:text-base text-gray-300 leading-relaxed">
+                $55 for a Linux desktop on your glasses.
+              </p>
+
+              <div class="mt-4 flex flex-wrap items-center gap-3">
+                <a
+                  href="https://www.instructables.com/Powerful-Raspberry-Pi-Smart-Glasses-for-Under-50-W-1/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="inline-flex items-center text-sm font-medium text-blue-400 hover:text-blue-300 hover:underline"
+                >
+                  <i class="fas fa-external-link-alt mr-2"></i>
+                  View on Instructables
+                </a>
+              </div>
             </div>
           </article>
         </div>
@@ -301,3 +257,4 @@
   </div>
 </body>
 </html>
+
