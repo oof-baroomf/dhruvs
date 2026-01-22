@@ -15,6 +15,20 @@
   />
   <style>
     body { font-family: "Inter", sans-serif; }
+    .timeline {
+      position: relative;
+    }
+    .timeline::before {
+      content: "";
+      position: absolute;
+      left: calc(1.5rem - 0.5px);
+      top: 0.75rem;
+      bottom: 0.75rem;
+      width: 1px;
+      background: #1f2937;
+      pointer-events: none;
+      z-index: 1;
+    }
   </style>
 </head>
 
@@ -27,16 +41,12 @@
     </header>
 
     <section>
-      <div class="relative">
-        <!-- Line stays put -->
-        <div class="absolute left-[26px] top-3 bottom-3 w-px bg-gray-800 pointer-events-none z-10"></div>
-
+      <div class="timeline">
         <div class="space-y-12">
           <!-- Muon -->
           <article class="grid grid-cols-[3rem,1fr] gap-6">
             <div class="flex justify-center pt-1.5">
-              <!-- Dot shifted right by ~0.2x its diameter vs the line -->
-              <div class="relative z-20 translate-x-[3px] h-3 w-3 rounded-full bg-blue-500 border-2 border-black shadow-lg"></div>
+              <div class="relative z-20 h-3 w-3 rounded-full bg-blue-500 border-2 border-black shadow-lg"></div>
             </div>
 
             <div>
@@ -80,7 +90,7 @@
           <!-- PromptMaxx -->
           <article class="grid grid-cols-[3rem,1fr] gap-6">
             <div class="flex justify-center pt-1.5">
-              <div class="relative z-20 translate-x-[3px] h-3 w-3 rounded-full bg-blue-500 border-2 border-black shadow-lg"></div>
+              <div class="relative z-20 h-3 w-3 rounded-full bg-blue-500 border-2 border-black shadow-lg"></div>
             </div>
 
             <div>
@@ -123,7 +133,7 @@
           <!-- Chat with Google Docs -->
           <article class="grid grid-cols-[3rem,1fr] gap-6">
             <div class="flex justify-center pt-1.5">
-              <div class="relative z-20 translate-x-[3px] h-3 w-3 rounded-full bg-blue-500 border-2 border-black shadow-lg"></div>
+              <div class="relative z-20 h-3 w-3 rounded-full bg-blue-500 border-2 border-black shadow-lg"></div>
             </div>
 
             <div>
@@ -167,7 +177,7 @@
           <!-- MuseFalcon -->
           <article class="grid grid-cols-[3rem,1fr] gap-6">
             <div class="flex justify-center pt-1.5">
-              <div class="relative z-20 translate-x-[3px] h-3 w-3 rounded-full bg-blue-500 border-2 border-black shadow-lg"></div>
+              <div class="relative z-20 h-3 w-3 rounded-full bg-blue-500 border-2 border-black shadow-lg"></div>
             </div>
 
             <div>
@@ -211,7 +221,7 @@
           <!-- Raspberry Pi Smart Glasses -->
           <article class="grid grid-cols-[3rem,1fr] gap-6">
             <div class="flex justify-center pt-1.5">
-              <div class="relative z-20 translate-x-[3px] h-3 w-3 rounded-full bg-blue-500 border-2 border-black shadow-lg"></div>
+              <div class="relative z-20 h-3 w-3 rounded-full bg-blue-500 border-2 border-black shadow-lg"></div>
             </div>
 
             <div>
@@ -257,4 +267,3 @@
   </div>
 </body>
 </html>
-
