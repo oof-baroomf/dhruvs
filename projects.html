@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="color-scheme" content="light dark" />
   <title>Dhruv - Projects</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link
@@ -14,7 +15,80 @@
     rel="stylesheet"
   />
   <style>
-    body { font-family: "Inter", sans-serif; }
+    :root {
+      color-scheme: light dark;
+      --bg: #f5f7fb;
+      --text: #111827;
+      --muted: #4b5563;
+      --body-copy: #374151;
+      --surface: #e5e7eb;
+      --surface-border: #d1d5db;
+      --surface-text: #111827;
+      --accent: #2563eb;
+      --timeline: #cbd5e1;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #000000;
+        --text: #ffffff;
+        --muted: #9ca3af;
+        --body-copy: #d1d5db;
+        --surface: #1f2937;
+        --surface-border: #374151;
+        --surface-text: #f9fafb;
+        --accent: #60a5fa;
+        --timeline: #1f2937;
+      }
+    }
+
+    body {
+      font-family: "Inter", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+    }
+
+    .page-shell {
+      max-width: 72rem;
+      margin: 0 auto;
+      padding-top: 1.25rem;
+      padding-bottom: 1.25rem;
+    }
+
+    .nav-button {
+      display: inline-flex;
+      align-items: center;
+      border: 1px solid var(--surface-border);
+      border-radius: 9999px;
+      padding: 0.5rem 1rem;
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: var(--text);
+      transition: color 0.2s ease, border-color 0.2s ease;
+    }
+
+    .nav-button:hover {
+      color: var(--accent);
+      border-color: var(--accent);
+    }
+
+    .text-gray-400 {
+      color: var(--muted) !important;
+    }
+
+    .text-gray-300 {
+      color: var(--body-copy) !important;
+    }
+
+    [class~="bg-gray-800/70"] {
+      background: var(--surface) !important;
+      color: var(--surface-text) !important;
+    }
+
+    .border-gray-700 {
+      border-color: var(--surface-border) !important;
+    }
+
     .timeline {
       position: relative;
     }
@@ -25,19 +99,24 @@
       top: 0.75rem;
       bottom: 0.75rem;
       width: 1px;
-      background: #1f2937;
+      background: var(--timeline);
       pointer-events: none;
       z-index: 1;
+    }
+
+    .timeline-dot {
+      border-color: var(--bg);
     }
   </style>
 </head>
 
-<body class="bg-black text-white pt-12 px-4 sm:px-10">
-  <div class="max-w-5xl mx-auto">
-    <header class="mb-12">
+<body class="pt-12 px-6 sm:px-10 lg:px-16">
+  <div class="page-shell">
+    <header class="mb-12 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
       <h1 class="text-4xl font-bold">
         Projects<span class="text-blue-500">.</span>
       </h1>
+      <a href="index.html" class="nav-button">Home</a>
     </header>
 
     <section>
@@ -46,7 +125,7 @@
           <!-- Muon -->
           <article class="grid grid-cols-[3rem,1fr] gap-6">
             <div class="flex justify-center pt-1.5">
-              <div class="relative z-20 h-3 w-3 rounded-full bg-blue-500 border-2 border-black shadow-lg"></div>
+              <div class="timeline-dot relative z-20 h-3 w-3 rounded-full bg-blue-500 border-2 shadow-lg"></div>
             </div>
 
             <div>
@@ -90,7 +169,7 @@
           <!-- PromptMaxx -->
           <article class="grid grid-cols-[3rem,1fr] gap-6">
             <div class="flex justify-center pt-1.5">
-              <div class="relative z-20 h-3 w-3 rounded-full bg-blue-500 border-2 border-black shadow-lg"></div>
+              <div class="timeline-dot relative z-20 h-3 w-3 rounded-full bg-blue-500 border-2 shadow-lg"></div>
             </div>
 
             <div>
@@ -133,7 +212,7 @@
           <!-- Chat with Google Docs -->
           <article class="grid grid-cols-[3rem,1fr] gap-6">
             <div class="flex justify-center pt-1.5">
-              <div class="relative z-20 h-3 w-3 rounded-full bg-blue-500 border-2 border-black shadow-lg"></div>
+              <div class="timeline-dot relative z-20 h-3 w-3 rounded-full bg-blue-500 border-2 shadow-lg"></div>
             </div>
 
             <div>
@@ -177,7 +256,7 @@
           <!-- MuseFalcon -->
           <article class="grid grid-cols-[3rem,1fr] gap-6">
             <div class="flex justify-center pt-1.5">
-              <div class="relative z-20 h-3 w-3 rounded-full bg-blue-500 border-2 border-black shadow-lg"></div>
+              <div class="timeline-dot relative z-20 h-3 w-3 rounded-full bg-blue-500 border-2 shadow-lg"></div>
             </div>
 
             <div>
@@ -221,7 +300,7 @@
           <!-- Raspberry Pi Smart Glasses -->
           <article class="grid grid-cols-[3rem,1fr] gap-6">
             <div class="flex justify-center pt-1.5">
-              <div class="relative z-20 h-3 w-3 rounded-full bg-blue-500 border-2 border-black shadow-lg"></div>
+              <div class="timeline-dot relative z-20 h-3 w-3 rounded-full bg-blue-500 border-2 shadow-lg"></div>
             </div>
 
             <div>
